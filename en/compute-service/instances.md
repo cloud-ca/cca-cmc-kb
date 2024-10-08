@@ -28,13 +28,13 @@ The user may supply the system with a public SSH key to install on the instance 
 
 Also, during configuration, a cost estimator will appear at the bottom of the page. Listed in the cost estimator are the selected configuration options and their individual costs, as well as an hourly and monthly estimated total. It will update dynamically as you select the desired configuration for your instance.
 
-![Screenshot of the Add Instance page with the cost estimator displayed](hypertec-instances-cost-estimator.png)
+![Screenshot of the Add Instance page with the cost estimator displayed](/assets/hypertec-instances-cost-estimator.png)
 
 ## Instance list
 
 Instances are listed under the **Instances** section of the selected Hypertec environment.
 
-![A screenshot of the Hypertec Cloud Instances page, with numbered dots indicating features of interest](hypertec-instances-numdot.png)
+![A screenshot of the Hypertec Cloud Instances page, with numbered dots indicating features of interest](/assets/hypertec-instances-numdot.png)
 
 1.  **List of Hypertec Cloud instances**
 
