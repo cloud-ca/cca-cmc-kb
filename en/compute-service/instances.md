@@ -28,9 +28,32 @@ The user may supply the system with a public SSH key to install on the instance 
 
 Also, during configuration, a cost estimator will appear at the bottom of the page. Listed in the cost estimator are the selected configuration options and their individual costs, as well as an hourly and monthly estimated total. It will update dynamically as you select the desired configuration for your instance.
 
-![Screenshot of the Add Instance page with the cost estimator displayed](/assets/hypertec-add-an-instance.png)
+![Screenshot of the Add Instance page with the cost estimator displayed](hypertec-instances-cost-estimator.png)
 
 ## Instance list
 
-![A screenshot of the Hypertec Cloud Instances page, with numbered dots indicating features of interest](/assets/instances-list.png)
+Instances are listed under the **Instances** section of the selected Hypertec environment.
+
+![A screenshot of the Hypertec Cloud Instances page, with numbered dots indicating features of interest](hypertec-instances-numdot.png)
+
+1.  **List of Hypertec Cloud instances**
+
+    A list of all instances in the selected Hypertec Cloud environment appears here in this area.
+
+2.  **Search box**
+
+    Type in the search box to filter the instances. The system will search through the Instance, State, Networking, and Created fields, as well as various properties of the instances which are not listed on this page, including ID, zone, SSH key, and others. Only a single keyword is allowed for searches, any white space will be automatically eliminated.
+
+3.  **Add instance**
+
+    Clicking this button will open the **Add Instance** page.
+
+4.  **Instance row**
+
+    Each row includes the name of the instance, its current state, network configuration, date of creation. Click on an entry to navigate to a page with configuration details and a list of all operations for that individual instance.
+
+5.  **Hidden Actions menu**
+
+    Each entry in the instances list has a Hidden Actions menu. Click on the Hidden Actions menu to access a list of frequently-used operations for the instance.
+
 
