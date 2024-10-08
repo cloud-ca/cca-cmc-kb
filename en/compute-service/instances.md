@@ -32,7 +32,7 @@ Also, during configuration, a cost estimator will appear at the bottom of the pa
 
 ## Instance list
 
-Instances are listed under the **Instances** section of the selected Hypertec environment.
+Instances are listed under the **Instances** section of the selected Hypertec Cloud environment.
 
 ![A screenshot of the Hypertec Cloud Instances page, with numbered dots indicating features of interest](/assets/hypertec-instances-numdot.png)
 
