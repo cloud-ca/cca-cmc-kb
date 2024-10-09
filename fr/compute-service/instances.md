@@ -34,7 +34,7 @@ De plus, lors de la configuration, un estimateur de coûts apparaîtra en bas de
 
 Les instances sont répertoriées dans la section **Instances** de l'environnement Hypertec Cloud sélectionné.
 
-![Une capture d'écran de la page Hypertec Cloud Instances, avec des points numérotés indiquant les fonctionnalités intéressantes](/assets/hypertec-instances-list.png)
+![Une capture d'écran de la page Hypertec Cloud Instances, avec des points numérotés indiquant les fonctionnalités intéressantes](/assets/hypertec-instances-numdot.png)
 
 1. **Liste des instances Hypertec Cloud**
 
