@@ -42,7 +42,7 @@ Instances are listed under the **Instances** section of the selected Hypertec Cl
 
 2.  **Search box**
 
-    Type in the search box to filter the instances. The system will search through the Instance, State, Networking, and Created fields, as well as various properties of the instances which are not listed on this page, including ID, zone, SSH key, and others. Only a single keyword is allowed for searches, any white space will be automatically eliminated.
+    Type in the search box to filter the instances. The system will search through the Instance, State, Networking, and Created fields, as well as various properties of the instances which are not listed on this page, including ID, zone, SSH key, and others.
 
 3.  **Add instance**
 
