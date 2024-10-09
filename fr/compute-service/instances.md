@@ -28,9 +28,30 @@ L'utilisateur peut fournir au système une clé SSH publique à installer sur l'
 
 De plus, lors de la configuration, un estimateur de coûts apparaîtra en bas de page. L'estimateur de coûts répertorie les options de configuration sélectionnées et leurs coûts individuels, ainsi qu'un total estimé horaire et mensuel. Il sera mis à jour dynamiquement à mesure que vous sélectionnez la configuration souhaitée pour votre instance.
 
-![Capture d'écran de la page Ajouter une instance avec l'estimateur de coût affiché](/assets/instances-cost-estimator.png)
+![Capture d'écran de la page Ajouter une instance avec l'estimateur de coût affiché](/assets/hypertec-instances-cost-estimator.png)
 
 ## Liste des instances
 
-![Une capture d'écran de la page Hypertec Cloud Instances, avec des points numérotés indiquant les fonctionnalités intéressantes](/assets/instances-list.png)
+Les instances sont répertoriées dans la section **Instances** de l'environnement Hypertec Cloud sélectionné.
 
+![Une capture d'écran de la page Hypertec Cloud Instances, avec des points numérotés indiquant les fonctionnalités intéressantes](/assets/hypertec-instances-list.png)
+
+1. **Liste des instances Hypertec Cloud**
+
+Une liste de toutes les instances de l'environnement Hypertec Cloud sélectionné apparaît ici dans cette zone.
+
+2. **Boîte de recherche**
+
+Saisissez dans la boîte de recherche pour filtrer les instances. Le système recherchera dans les champs Instance, État, Réseautiqu et Date de création, ainsi que dans diverses propriétés des instances qui ne sont pas répertoriées sur cette page, notamment l'ID, la zone, la clé SSH et d'autres.
+
+3. **Ajouter une instance**
+
+Cliquer sur ce bouton ouvrira la page **Ajouter une instance**.
+
+4. **Entrée instance**
+
+Chaque entrée comprend le nom de l'instance, son état actuel, la configuration réseautique et la date de création. Cliquez sur une entrée pour accéder à une page contenant les détails de la configuration et une liste de toutes les opérations pour cette instance individuelle.
+
+5. **Menu des actions cachées**
+
+Chaque entrée de la liste des instances possède un menu des actions cachées. Cliquez sur le menu des actions cachées pour accéder à une liste des opérations fréquemment utilisées pour l'instance.
