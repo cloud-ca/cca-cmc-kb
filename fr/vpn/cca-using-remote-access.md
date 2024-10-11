@@ -14,7 +14,7 @@ Avant de pouvoir vous connecter à votre VPC à travers une connexion VPN, vous 
 1. Accédez à l’environnement Hypertec Cloud cible.
 1. Sélectionner l'onglet *Réseautique*.
 1. Localisez le VPC cible. Il s'agit du VPC auquel vous souhaitez vous connecter via le VPN.
-1. Cliquez sur l'icône d'engrenage *VPN d'accès à distance* pour le VPC cible. La page *VPN d'accès à distance* apparaît.
+1. Cliquez sur l'icône d'engrenage *Accès VPN à distance* pour le VPC cible. La page *Accès VPN à distance* apparaît.
 1. Cliquez sur le menu des actions cachées et sélectionnez *Activer* pour activer l'accès VPN.
 1. Cliquez sur le bouton *Valider* lorsqu'il apparaît.
 1. Après quelques instants, un certificat s'affiche sur la page.
