@@ -39,7 +39,10 @@ Users running Windows 11, MacOS, or Linux will not encounter this issue.
 
 Please note that an upcoming update will require this change to be in place.
 
-**Path:**  `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters`
+**Path:**
+```
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters
+```
 
 **Entry:**
 ```
