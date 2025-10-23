@@ -7,28 +7,45 @@ The following instructions apply to Microsoft Windows 10 using its native VPN cl
 
 #### Add the certificate to the list of trusted certificates
 
-1. Run `mmc.exe`
-1. Go to *Files > Add/Remove Snap-in…*
-1. Select *Certificates* from the list on the left and click *Add >*.
-1. In the pop-up window, select **Computer account**.
+1\. Run `mmc.exe`
+2\. Go to *Files > Add/Remove Snap-in…*
+3\. Select *Certificates* from the list on the left and click *Add >*.
+4\. In the pop-up window, select **Computer account**.
 
 ![Certificates snap-in](/assets/Win-1-Computer-Account.png)
 
-5. In the next window, select **Local Computer: (the computer this console is running on)** and click *Finish*.
-5. Back in the console window, select "*Console Root > Certificates (Local Computer) > Trusted Root Certification Authorities > Certificates*.
-5. Right click on *Certificates* and click *All Tasks > Import…*.
+5\. In the next window, select **Local Computer: (the computer this console is running on)** and click *Finish*.
+6\. Back in the console window, select "*Console Root > Certificates (Local Computer) > Trusted Root Certification Authorities > Certificates*.
+7\. Right click on *Certificates* and click *All Tasks > Import…*.
 
 ![All tasks menu, import option](/assets/Win-2-Import.png)
 
-8. In the next window, click *Next*.
-8. Click on *Browse…* and select the certificate file that you saved on disk with the **.crt** extension (the certificate is provided in the Hypertec Cloud UI, in the page to configure the remote management VPN) and click on *Next*.
+8\. In the next window, click *Next*.
+9\. Click on *Browse…* and select the certificate file that you saved on disk with the **.crt** extension (the certificate is provided in the Hypertec Cloud UI, in the page to configure the remote management VPN) and click on *Next*.
 
 ![Certificate import wizard](/assets/Win-3-Browse.png)
 
-10. Keep **Place all certificates in the following store: Trusted Root Certification Authorities**  and click *Next*.
-10. Click on *Finish*. You should see the message *The import was successful*. You can close the pop-up and the Console.
-10. If your server is behind a NAT, follow this procedure: [Microsoft link](https://support.microsoft.com/en-us/help/926179/how-to-configure-an-l2tp-ipsec-server-behind-a-nat-t-device-in-windows-vista-and-in-windows-server-2008)
+10\. Keep **Place all certificates in the following store: Trusted Root Certification Authorities**  and click *Next*.
+11\. Click on *Finish*. You should see the message *The import was successful*. You can close the pop-up and the Console.
+12\. If your server is behind a NAT, follow this procedure: [Microsoft link](https://support.microsoft.com/en-us/help/926179/how-to-configure-an-l2tp-ipsec-server-behind-a-nat-t-device-in-windows-vista-and-in-windows-server-2008)
 
+#### Modify the Windows Registry to force strong cipher
+
+**Important:** The change below will be required for the upcoming Apache CloudStack 4.18  update, currently scheduled for October 30, 2025. Please do not apply this change before that date. 
+
+Windows 10 has reached end of life and is no longer supported by Microsoft. By default, it offers a weak cipher when setting up an IKEv2 VPN, which results in a policy mismatch error. To force Windows 10 to use a stronger cipher the registry requires `dword (32bit)NegotiateDH2048_AES256` with value `1` to be added at `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters`. 
+
+Users running Windows 11, MacOS, or Linux will not encounter this issue.
+
+Please note that an upcoming update will require this change to be in place.
+
+**Path:**  `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters`
+
+**Entry:**
+```
+NegotiateDH2048_AES256 (DWORD 32-bit)
+Value: 1
+```
 
 #### Create network VPN connection
 ![Settings](/assets/Win-4-Settings.png)
