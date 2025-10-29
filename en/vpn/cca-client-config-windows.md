@@ -31,11 +31,9 @@ The following instructions apply to Microsoft Windows 10 using its native VPN cl
 
 #### Modify the Windows Registry to force strong cipher
 
-**Important:** The change below will be required for the upcoming Apache CloudStack 4.18  update, currently scheduled for October 30, 2025. Please do not apply this change before that date. 
+**Important:** The change below will be required for the upcoming Apache CloudStack 4.18 update, currently scheduled for November 5, 2025. Please do not apply this change before that date. 
 
-Windows 10 has reached end of life and is no longer supported by Microsoft. By default, it offers a weak cipher when setting up an IKEv2 VPN, which results in a policy mismatch error. To force Windows 10 to use a stronger cipher the registry requires `dword (32bit)NegotiateDH2048_AES256` with value `1` to be added at `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters`. 
-
-Users running Windows 11, MacOS, or Linux will not encounter this issue.
+Users on macOS or Linux will not encounter this issue. Those using Windows 10 or Windows 11 must apply this change starting from November 5, 2025 and onward.  By default, Windows 10 and Windows 11 offer a weak cipher when setting up an IKEv2 VPN, which results in a policy mismatch error. To force Windows 10 and Windows 11 to use a stronger cipher the registry requires `DWORD (32bit)NegotiateDH2048_AES256` with value `1` to be added at `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters`. 
 
 Please note that an upcoming update will require this change to be in place.
 
@@ -48,6 +46,14 @@ Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters
 ```
 NegotiateDH2048_AES256 (DWORD 32-bit)
 Value: 1
+```
+
+The following can be added to a text document and saved with the `.reg` extension and then be doubled clicked to be imported:
+
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters] "NegotiateDH2048_AES256"=dword:00000001
 ```
 
 #### Create network VPN connection
