@@ -57,6 +57,8 @@ Windows Registry Editor Version 5.00
 NegotiateDH2048_AES256"=dword:00000001
 ```
 
+A sample registry file can be downloaded [here](https://objects-qc.cloud.ca/v1/5f78f47d34e54036947d4b983e88f2e6/public/force_strong_cipher.reg).
+
 #### Create network VPN connection
 ![Settings](/assets/Win-4-Settings.png)
 
