@@ -31,9 +31,9 @@ Ces instructions permettent de configurer le VPN d'accès distant avec le client
 
 #### Modifier le Registre Windows pour forcer un chiffrement fort
 
-**Important :** La modification ci-dessous sera nécessaire pour la prochaine mise à jour de l’infrastructure infonuagique, actuellement prévue pour le 5 novembre 2025. Veuillez ne pas appliquer cette modification avant cette date.
+**Important :** La modification ci-dessous sera nécessaire pour la prochaine mise à jour de l’infrastructure infonuagique, actuellement prévue pour le 11 mars 2026. Veuillez ne pas appliquer cette modification avant cette date.
 
-Les utilisateurs de macOS ou Linux ne rencontreront pas ce problème. Ceux qui utilisent Windows 10 ou Windows 11 devront appliquer cette modification à partir du 5 novembre 2025. Par défaut, Windows 10 et Windows 11 utilisent un chiffrement faible lors de la configuration d'un VPN IKEv2, ce qui provoque une erreur de non-concordance de stratégie. Pour forcer Windows 10 et Windows 11 à utiliser un chiffrement plus robuste, il faut ajouter au Registre Windows la valeur `DWORD (32bit)NegotiateDH2048_AES256` avec la valeur `1` à la sous-clé `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters`.
+Les utilisateurs de macOS ou Linux ne rencontreront pas ce problème. Ceux qui utilisent Windows 10 ou Windows 11 devront appliquer cette modification à partir du 11 mars 2026. Par défaut, Windows 10 et Windows 11 utilisent un chiffrement faible lors de la configuration d'un VPN IKEv2, ce qui provoque une erreur de non-concordance de stratégie. Pour forcer Windows 10 et Windows 11 à utiliser un chiffrement plus robuste, il faut ajouter au Registre Windows la valeur `DWORD (32bit)NegotiateDH2048_AES256` avec la valeur `1` à la sous-clé `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\Parameters`.
 
 Veuillez noter qu'une prochaine mise à jour nécessitera la mise en place de cette modification.
 
